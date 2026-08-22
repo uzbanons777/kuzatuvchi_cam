@@ -1,41 +1,10 @@
-/* =========================================================================
-   KUZATUV CAM — kamera va tarmoq uskunalari do'koni ilovasi
-   Toza JavaScript, build kerak emas — index.html, style.css, app.js,
-   products-data.js va images/ papkasini istalgan serverga yuklab qo'ysangiz
-   ishlayveradi.
-
-   SOZLASH KERAK BO'LGAN JOYLAR — pastdagi CONFIG bo'limi:
-
-   1) TELEGRAMGA BUYURTMA YUBORISH:
-      - @BotFather orqali bot yarating, TOKEN oling.
-      - Botni buyurtmalar guruhingizga admin qilib qo'shing.
-      - Guruhda xabar yozdirib, https://api.telegram.org/bot<TOKEN>/getUpdates
-        orqali "chat":{"id": -100XXXXXXXXXX} qiymatini toping va CHAT_ID ga qo'ying.
-
-   2) BARCHA FOYDALANUVCHIDA BIR XIL KO'RINISH (real-time sinxronizatsiya):
-      Admin mahsulot qo'shsa/o'chirsa/tahrirlasa, bu o'zgarish SAYTGA KIRGAN
-      BARCHA odamlarda avtomatik ko'rinishi uchun bitta umumiy "bulut"
-      ma'lumotlar bazasi kerak — buning uchun BEPUL Firebase Realtime
-      Database ishlatiladi:
-        a) https://console.firebase.google.com sahifasida yangi loyiha oching.
-        b) "Build > Realtime Database" bo'limidan bazani yarating (test rejimida).
-        c) Loyiha sozlamalari (⚙️ > Project settings > General > Your apps > Web)
-           dan "firebaseConfig" obyektini nusxa oling va pastdagi
-           CONFIG.FIREBASE ichiga joylashtiring.
-        d) Realtime Database > Rules bo'limida o'qish hammaga, yozish parolga
-           qarab cheklanishi mumkin (oddiy boshlash uchun test-rejim yetarli).
-      Agar bu bo'lim to'ldirilmasa, sayt baribir ishlayveradi, lekin admin
-      o'zgarishlari faqat SHU BRAUZERDA saqlanadi (boshqa foydalanuvchilarga
-      ko'rinmaydi) — buni pastda "DEMO REJIM" sifatida ko'rasiz.
-   ========================================================================= */
-
 const CONFIG = {
-  BOT_TOKEN: "8392021656:AAGfNoHQuPuFZH1gHXGYnWSW37SmhnL-DRk",     // <-- @BotFather'dan olingan token
+  BOT_TOKEN: "8392021656:AAEGzevOO0qfT6Qn64hVqI2jPapO9xFltoY",     // <-- @BotFather'dan olingan token
   CHAT_ID: "@buyurtmalar_cam",          // <-- yoki -100XXXXXXXXXX ko'rinishidagi guruh id
 
   // 1 AQSH dollari necha so'm ekanini shu yerda ko'rsating (mahsulot narxlari
   // manba fayllarda USD/u.e.da bo'lgani uchun). Kerak bo'lsa yangilab turing.
-  USD_TO_SUM: 12700,
+  USD_TO_SUM: 12000,
 
   FIREBASE: {
     apiKey: "AIzaSyC2ps_V1sw7CIAq2LJbt9VSQaTQLZqjeTk",
